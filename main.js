@@ -1,5 +1,7 @@
 var affirmationOption = document.querySelector("#affirmation");
 var mantraOption = document.querySelector("#mantra");
+var receiveMessageButton = document.querySelector(".receive-message");
+var bellIcon = document.querySelector(".meditation-image-box");
 
 
 var affirmations = [
@@ -37,3 +39,42 @@ var mantras = [
 ];
 
 var meditateImages = []
+
+// 0. add event listener to button !!DID IT!!
+// 1. figure out which option selected when button is clicked
+// 2. randomize selected option`
+// 3. randomized option replaces bell
+receiveMessageButton.addEventListener("click", selectOption);
+
+
+function selectOption() {
+  if(document.getElementById("affirmation").checked) {
+    //capute affirmation has been selected
+    var randomAffirmation = randomizeSelection(affirmations)
+    console.log(randomAffirmation)
+  } else {
+    //captue mantra is selected
+    var randomMantra = randomizeSelection(mantras)
+    console.log(randomMantra)
+  }
+};
+
+function randomizeSelection(array) {
+  // this produces random index number
+  var randomIndex = Math.floor(Math.random() * array.length);
+  //want to return value at index number from array
+  return array[randomIndex]
+};
+
+
+//mantras[7]
+// affirmations[11]
+// array[3]
+// array[index]
+
+
+
+// function viewMessage() {
+//   affirmationsOption.innerHTML =
+// }
+//
