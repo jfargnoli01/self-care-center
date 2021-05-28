@@ -1,8 +1,8 @@
 var affirmationOption = document.querySelector("#affirmation");
 var mantraOption = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
-var bellIcon = document.querySelector(".meditation-image-box");
-
+var bellIcon = document.querySelector(".image");
+var showMessage = document.querySelector(".random-message");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -41,9 +41,17 @@ var mantras = [
 var meditateImages = []
 
 // 0. add event listener to button !!DID IT!!
-// 1. figure out which option selected when button is clicked
-// 2. randomize selected option`
+// 1. figure out which option selected when button is clicked !!DID IT!!
+// 2. randomize selected option` !!DID IT!!
+
+
 // 3. randomized option replaces bell
+// 3.a make function to hide bell icon (img)
+// 3.b update HTML and CSS to hide bell
+// 3.c make function to show message
+// 3.d update HTML and CSS to hide message and show when clicked
+// 3.e call new functions when selecting new option
+
 receiveMessageButton.addEventListener("click", selectOption);
 
 
@@ -51,11 +59,11 @@ function selectOption() {
   if(document.getElementById("affirmation").checked) {
     //capute affirmation has been selected
     var randomAffirmation = randomizeSelection(affirmations)
-    console.log(randomAffirmation)
+    viewMessage(randomAffirmation)
   } else {
     //captue mantra is selected
     var randomMantra = randomizeSelection(mantras)
-    console.log(randomMantra)
+    viewMessage(randomMantra)
   }
 };
 
@@ -66,15 +74,12 @@ function randomizeSelection(array) {
   return array[randomIndex]
 };
 
-
-//mantras[7]
-// affirmations[11]
-// array[3]
-// array[index]
-
-
-
-// function viewMessage() {
-//   affirmationsOption.innerHTML =
-// }
+function viewMessage(randomMessage) {
+  //display random message
+  showMessage.innerText = randomMessage
+  // show random array Message
+  showMessage.classList.remove("hidden")
+  // hide bell icon
+  bellIcon.classList.add("hidden");
+}
 //
