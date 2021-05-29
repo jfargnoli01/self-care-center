@@ -6,13 +6,21 @@
   </head>
   <body>
     <h1>✨ Self Care Center ✨</h1>
-    <p class="which-message">Which type of message?</p>
+    <p class="hidden login">User Login</p>
+      <section class="login-box">
+          <input class="user-id-input" type="text">
+          <label class="user-id"><b>User ID</b></label>
+          <section class="hidden login-button">
+            <button class="login">Login</button>
+          </section>
+      </section>
+    <p class="hidden which-message">Which type of message?</p>
       <section class="message-type">
         <input type="radio" id="affirmation" name="selection" value="affirmtion">
         <label class="affirmation-label" for="affirmation">affirmation</label>
         <input type="radio" id="mantra" name="selection" value="mantra">
         <label class="mantra-label" for="mantra">mantra</label>
-        <section class="message-button">
+        <section class="hidden message-button">
           <button class="receive-message">Receive Message</button>
         </section>
       </section>
