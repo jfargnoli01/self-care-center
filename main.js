@@ -5,6 +5,7 @@ var bellIcon = document.querySelector(".image");
 var showMessage = document.querySelector(".random-message");
 var userId = document.querySelector("");
 var loginButton = document.querySelector("");
+var welcomeMessage = document.querySelector("");
 
 var affirmations = [
   "I forgive myself and set myself free.",
