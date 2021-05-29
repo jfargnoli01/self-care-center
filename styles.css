@@ -15,23 +15,23 @@ body {
 }
 
 h1 {
-  display: block;
-  text-align: center;
-  font-size: 1.5em;
   color: #ffffff;
+  display: block;
   font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
   margin: 30px;
   padding-top: 20px;
+  text-align: center;
 }
 
 .which-message {
-  font-size: 1.1em;
-  text-align: center;
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
+  font-size: 1.1em;
   font-weight: bold;
   margin:2px;
   padding-top: 40px;
+  text-align: center;
 }
 
 .random-message {
@@ -59,14 +59,14 @@ section.message-button{
 }
 
 button.receive-message {
-  margin: 20px 0 8px;
-  border-style: none;
-  font-family: 'Quicksand', sans-serif;
-  padding: 4px 20px;
-  border-radius: 4px;
-  text-align: center;
-  color: #ffffff;
   background-color: #134d71;
+  border-radius: 4px;
+  border-style: none;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  margin: 20px 0 8px;
+  padding: 4px 20px;
+  text-align: center;
 }
 
 .affirmation-label {
