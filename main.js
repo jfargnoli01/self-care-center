@@ -3,9 +3,11 @@ var mantraOption = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
 var bellIcon = document.querySelector(".image");
 var showMessage = document.querySelector(".random-message");
-var userId = document.querySelector("");
-var loginButton = document.querySelector("");
-var welcomeMessage = document.querySelector("");
+var userId = document.querySelector(".user-id-input");
+var loginButton = document.querySelector(".login-button");
+var welcomeMessage = document.querySelector(".welcome-user");
+var loginFeature = document.querySelector(".login-feature");
+var messageFeature = document.querySelector(".message-feature");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -44,7 +46,7 @@ var mantras = [
 var meditateImages = []
 
 receiveMessageButton.addEventListener("click", selectOption);
-
+loginButton.addEventListener("click", loginUser);
 
 function selectOption() {
   if(document.getElementById("affirmation").checked) {
@@ -74,3 +76,23 @@ function viewMessage(randomMessage) {
   bellIcon.classList.add("hidden");
 }
 //
+function loginUser() {
+// capture input value
+  var userValue = userId.value;
+  console.log(userValue);
+  loginFeature.classList.add("hidden");
+  messageFeature.classList.remove("hidden");
+  // replace text with userValue
+  welcomeMessage.innerText = `Welcome, ${userValue}!`;
+}
+
+
+// ON LOGIN CLICK:
+//  - take user input from user id input field
+//  - page hides login feature
+//  - page displays the message feature
+//  - page displays welcome Message:Welcome, ${userInput}
+
+// var userId = document.querySelector(".user-id-input");
+// var loginButton = document.querySelector(".login-button");
+// var welcomeMessage = document.querySelector(".welcome-user");
