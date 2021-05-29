@@ -1,5 +1,3 @@
-var affirmationOption = document.querySelector("#affirmation");
-var mantraOption = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
 var bellIcon = document.querySelector(".image");
 var showMessage = document.querySelector(".random-message");
