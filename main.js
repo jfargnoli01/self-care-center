@@ -46,28 +46,27 @@ loginButton.addEventListener("click", loginUser);
 
 function selectOption() {
   if(document.getElementById("affirmation").checked) {
-    var randomAffirmation = randomizeSelection(affirmations)
-    viewMessage(randomAffirmation)
+    var randomAffirmation = randomizeSelection(affirmations);
+    viewMessage(randomAffirmation);
   } else {
-    var randomMantra = randomizeSelection(mantras)
-    viewMessage(randomMantra)
+    var randomMantra = randomizeSelection(mantras);
+    viewMessage(randomMantra);
   }
 };
 
 function randomizeSelection(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex]
+  return array[randomIndex];
 };
 
 function viewMessage(randomMessage) {
-  showMessage.innerText = randomMessage
-  showMessage.classList.remove("hidden")
+  showMessage.innerText = randomMessage;
+  showMessage.classList.remove("hidden");
   bellIcon.classList.add("hidden");
 };
 
 function loginUser() {
   var userValue = userId.value;
-  console.log(userValue);
   loginFeature.classList.add("hidden");
   messageFeature.classList.remove("hidden");
   welcomeMessage.innerText = `Welcome, ${userValue}!`;
