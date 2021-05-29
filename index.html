@@ -6,28 +6,33 @@
   </head>
   <body>
     <h1>✨ Self Care Center ✨</h1>
-    <p class="hidden login">User Login</p>
-      <section class="login-box">
-          <input class="user-id-input" type="text">
-          <label class="user-id"><b>User ID</b></label>
-          <section class="hidden login-button">
-            <button class="login">Login</button>
-          </section>
-      </section>
-    <p class="hidden which-message">Which type of message?</p>
-      <section class="message-type">
-        <input type="radio" id="affirmation" name="selection" value="affirmtion">
-        <label class="affirmation-label" for="affirmation">affirmation</label>
-        <input type="radio" id="mantra" name="selection" value="mantra">
-        <label class="mantra-label" for="mantra">mantra</label>
-        <section class="hidden message-button">
-          <button class="receive-message">Receive Message</button>
+    <section class="login-feature">
+      <p class="login">User Login:</p>
+        <section class="login-box">
+            <label class="user-id">User ID</label>
+            <input class="user-id-input" type="text">
+            <section class="login-button-section">
+              <button class="login-button">Login</button>
+            </section>
         </section>
-      </section>
-      <section class="meditation-image-box">
-        <p class="hidden random-message">Show Random Message</p>
-        <img class="image" src="./assets/meditate.svg" alt="mediation bell icon">
-      </section>
+    </section>
+    <section class="hidden message-feature">
+      <p class="welcome-user">Welcome, User"</p>
+      <p class="which-message">Which type of message?</p>
+        <section class="hidden message-type">
+          <input type="radio" id="affirmation" name="selection" value="affirmtion">
+          <label class="affirmation-label" for="affirmation">affirmation</label>
+          <input type="radio" id="mantra" name="selection" value="mantra">
+          <label class="mantra-label" for="mantra">mantra</label>
+          <section class="hidden message-button">
+            <button class="receive-message">Receive Message</button>
+          </section>
+        </section>
+        <section class="meditation-image-box">
+          <p class="hidden random-message">Show Random Message</p>
+          <img class="image" src="./assets/meditate.svg" alt="mediation bell icon">
+        </section>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
