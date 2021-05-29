@@ -24,7 +24,7 @@ h1 {
   padding-top: 20px;
 }
 
-p {
+.which-message {
   font-size: 1.1em;
   text-align: center;
   color: #ffffff;
@@ -34,15 +34,23 @@ p {
   padding-top: 40px;
 }
 
+.random-message {
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  margin: 19px 0;
+}
+
 section.message-type {
-  text-align: center;
+  background-color: #ffffff;
+  border-radius: 6px;
   font-family: 'Quicksand', sans-serif;
   font-size: .85em;
   font-style: italic;
-  background-color: #ffffff;
+  margin: 10px auto 80px;
   padding-top: 10px;
-  margin: 10px 250px 80px;
-  border-radius: 6px
+  text-align: center;
+  width: 500px;
 }
 
 
@@ -52,13 +60,13 @@ section.message-button{
 
 button.receive-message {
   margin: 20px 0 8px;
-  padding: 4px 20px;
   border-style: none;
+  font-family: 'Quicksand', sans-serif;
+  padding: 4px 20px;
   border-radius: 4px;
   text-align: center;
   color: #ffffff;
   background-color: #134d71;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .affirmation-label {
@@ -66,13 +74,18 @@ button.receive-message {
 }
 
 img {
-  display: block;
+  width: 60px;
+}
+
+.meditation-image-box {
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: 60px;
-  background-color: #ffffff;
-  padding: 3% 30%;
-  border-radius: 6px
+  padding: 30px 0;
+  width: 700px;
 }
 
 .hidden {
