@@ -1,5 +1,3 @@
-var affirmationOption = document.querySelector("#affirmation");
-var mantraOption = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
 var bellIcon = document.querySelector(".image");
 var showMessage = document.querySelector(".random-message");
@@ -43,56 +41,33 @@ var mantras = [
   "I am the sky, the rest is weather.",
 ];
 
-var meditateImages = []
-
 receiveMessageButton.addEventListener("click", selectOption);
 loginButton.addEventListener("click", loginUser);
 
 function selectOption() {
   if(document.getElementById("affirmation").checked) {
-    //capute affirmation has been selected
-    var randomAffirmation = randomizeSelection(affirmations)
-    viewMessage(randomAffirmation)
+    var randomAffirmation = randomizeSelection(affirmations);
+    viewMessage(randomAffirmation);
   } else {
-    //captue mantra is selected
-    var randomMantra = randomizeSelection(mantras)
-    viewMessage(randomMantra)
+    var randomMantra = randomizeSelection(mantras);
+    viewMessage(randomMantra);
   }
 };
 
 function randomizeSelection(array) {
-  // this produces random index number
   var randomIndex = Math.floor(Math.random() * array.length);
-  //want to return value at index number from array
-  return array[randomIndex]
+  return array[randomIndex];
 };
 
 function viewMessage(randomMessage) {
-  //display random message
-  showMessage.innerText = randomMessage
-  // show random array Message
-  showMessage.classList.remove("hidden")
-  // hide bell icon
+  showMessage.innerText = randomMessage;
+  showMessage.classList.remove("hidden");
   bellIcon.classList.add("hidden");
-}
-//
+};
+
 function loginUser() {
-// capture input value
   var userValue = userId.value;
-  console.log(userValue);
   loginFeature.classList.add("hidden");
   messageFeature.classList.remove("hidden");
-  // replace text with userValue
   welcomeMessage.innerText = `Welcome, ${userValue}!`;
-}
-
-
-// ON LOGIN CLICK:
-//  - take user input from user id input field
-//  - page hides login feature
-//  - page displays the message feature
-//  - page displays welcome Message:Welcome, ${userInput}
-
-// var userId = document.querySelector(".user-id-input");
-// var loginButton = document.querySelector(".login-button");
-// var welcomeMessage = document.querySelector(".welcome-user");
+};
