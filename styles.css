@@ -25,10 +25,10 @@ h1 {
 }
 
 .login-feature {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .login {
@@ -43,8 +43,8 @@ h1 {
 }
 
 .user-id {
-  font-family: 'Quicksand', sans-serif;
   display: block;
+  font-family: 'Quicksand', sans-serif;
   margin-bottom: 8px;
 }
 
