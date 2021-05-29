@@ -3,6 +3,11 @@ var mantraOption = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
 var bellIcon = document.querySelector(".image");
 var showMessage = document.querySelector(".random-message");
+var userId = document.querySelector(".user-id-input");
+var loginButton = document.querySelector(".login-button");
+var welcomeMessage = document.querySelector(".welcome-user");
+var loginFeature = document.querySelector(".login-feature");
+var messageFeature = document.querySelector(".message-feature");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -40,20 +45,8 @@ var mantras = [
 
 var meditateImages = []
 
-// 0. add event listener to button !!DID IT!!
-// 1. figure out which option selected when button is clicked !!DID IT!!
-// 2. randomize selected option` !!DID IT!!
-
-
-// 3. randomized option replaces bell
-// 3.a make function to hide bell icon (img)
-// 3.b update HTML and CSS to hide bell
-// 3.c make function to show message
-// 3.d update HTML and CSS to hide message and show when clicked
-// 3.e call new functions when selecting new option
-
 receiveMessageButton.addEventListener("click", selectOption);
-
+loginButton.addEventListener("click", loginUser);
 
 function selectOption() {
   if(document.getElementById("affirmation").checked) {
@@ -83,3 +76,23 @@ function viewMessage(randomMessage) {
   bellIcon.classList.add("hidden");
 }
 //
+function loginUser() {
+// capture input value
+  var userValue = userId.value;
+  console.log(userValue);
+  loginFeature.classList.add("hidden");
+  messageFeature.classList.remove("hidden");
+  // replace text with userValue
+  welcomeMessage.innerText = `Welcome, ${userValue}!`;
+}
+
+
+// ON LOGIN CLICK:
+//  - take user input from user id input field
+//  - page hides login feature
+//  - page displays the message feature
+//  - page displays welcome Message:Welcome, ${userInput}
+
+// var userId = document.querySelector(".user-id-input");
+// var loginButton = document.querySelector(".login-button");
+// var welcomeMessage = document.querySelector(".welcome-user");
